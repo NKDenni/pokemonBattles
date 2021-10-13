@@ -13,11 +13,11 @@ MVP Goals for this project:
         * Random stats as base starter
 
 Stretch Goals:
-1) Integrate Animation API https://www.framer.com/motion/
-2) Battle system,
-    1) Pokemon creature inventory
+1) Battle system,
+    a) Pokemon creature inventory
         * Create, Update, and Delete creatures in inventory
         * When creating creature, we can grab a list of images from the Pokemon API to serve as the creatures avatar image.
-    2) Battle
+    b) Battle
         * Get a random Pokemon from the API
         * Modify player stats after win/lose
+2) Integrate Animation API https://www.framer.com/motion/
