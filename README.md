@@ -4,7 +4,7 @@ Group Project - CodingDojo Oct 2021
 Explore the world of Pokemon! 
 
 MVP Goals for this project:
-1) Guest player gets one of four starter pokemon from API
+1) Guest player gets one random (or one of four starter) pokemon from API
 2) Battle page: 
     a) Pokemon creature generator
         * Random starter pokemon (or maybe one of four?)
