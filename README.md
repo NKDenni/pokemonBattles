@@ -7,8 +7,7 @@ MVP Goals for this project:
 1) Guest player gets one of four starter pokemon from API
 2) Battle page: 
     a) Pokemon creature generator
-        * Random starter pokemon
-        * Stats
+        * Random starter pokemon (or maybe one of four?)
         * Random stats as base starter
     b) Battle
         * Get random Pokemon and battle that pokemon 
