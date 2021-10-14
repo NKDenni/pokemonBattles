@@ -4,11 +4,10 @@ Group Project - CodingDojo Oct 2021
 Explore the world of Pokemon! 
 
 MVP Goals for this project:
-1) Guest player gets a random pokemon from API
-4) Battle page: 
+1) Guest player gets one random (or one of four starter) pokemon from API
+2) Battle page: 
     a) Pokemon creature generator
-        * Random starter pokemon
-        * Stats
+        * Random starter pokemon (or maybe one of four?)
         * Random stats as base starter
     b) Battle
         * Get random Pokemon and battle that pokemon 
