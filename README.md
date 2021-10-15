@@ -3,6 +3,13 @@ Group Project - CodingDojo Oct 2021
 
 Explore the world of Pokemon! 
 
+Team Members:
+
+Matias Salas (Back end / Dev ops)
+Tim Penick (Front end / Dev ops/ GitHub Admin)
+Nathan Denni (Front end / Game Mechanics / API integration)git
+John Turner (Front end / Game Mechanics)
+
 MVP Goals for this project:
 1) Guest player gets one random (or one of four starter) pokemon from API
 2) Battle page: 
