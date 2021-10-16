@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
-import Start from './views/start'
+import SideBySide from './views/sidebyside'
 import './App.scss';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       </div>
       <div>
       <Router>
-        <Start default path="/" />
+          <SideBySide default path="/" />
       </Router>
       </div>
       <div>
