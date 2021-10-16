@@ -5,9 +5,9 @@ Explore the world of Pokemon!
 
 Team Members:
 
-Matias Salas (Back end / Dev ops)
-Tim Penick (Front end / Dev ops/ GitHub Admin)
-Nathan Denni (Front end / Game Mechanics / API integration)git
+Matias Salas (Back end / Dev ops / styling assets)
+Tim Penick (Front end CRUD / Project Managment / GitHub Admin)
+Nathan Denni (Front end / Game Mechanics / API integration / Styling)
 John Turner (Front end / Game Mechanics)
 
 MVP Goals for this project:
