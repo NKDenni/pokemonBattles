@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+    font-family: "Pokemon Solid";
+    src: local("Pokemon Solid"),
+        url('./fonts/Pokemon Solid.ttf') format("truetype");
+    font-weight: normal;
+}
