@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Pokemon Solid, sans-serif;
+    src: local(Pokemon Solid), url(./fonts/PokemonSolid.ttf) format('truetype');
+    font-style: normal;
+}
+
+#navbar {
+    height: 160px;
+    background-color: #C62828
+}
+
+#battles {
+
+    font-family: Pokemon Solid;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 72px;
+
+    color: #FFCC00;
+    text-shadow:
+    0px 6px 0 #005EA4,
+    1px 6px 0 #005EA4,
+    2px 6px 0 #005EA4,
+    3px 6px 0 #005EA4,
+    4px 6px 0 #005EA4,
+    5px 6px 0 #005EA4,
+    6px 0px 0 #005EA4,
+    6px 1px 0 #005EA4,
+    6px 2px 0 #005EA4,
+    6px 3px 0 #005EA4,
+    6px 4px 0 #005EA4,
+    6px 5px 0 #005EA4,
+    6px 6px 0 #005EA4,
+    0px -6px 0 #005EA4,
+    1px -6px 0 #005EA4,
+    2px -6px 0 #005EA4,
+    3px -6px 0 #005EA4,
+    4px -6px 0 #005EA4,
+    5px -6px 0 #005EA4,
+    6px -6px 0 #005EA4,
+    -1px 6px 0 #005EA4,
+    -2px 6px 0 #005EA4,
+    -3px 6px 0 #005EA4,
+    -4px 6px 0 #005EA4,
+    -5px 6px 0 #005EA4,
+    -1px -6px 0 #005EA4,
+    -2px -6px 0 #005EA4,
+    -3px -6px 0 #005EA4,
+    -4px -6px 0 #005EA4,
+    -5px -6px 0 #005EA4,
+    -6px -6px 0 #005EA4,
+    -6px -1px 0 #005EA4,
+    -6px -2px 0 #005EA4,
+    -6px -3px 0 #005EA4,
+    -6px -4px 0 #005EA4,
+    -6px -5px 0 #005EA4;
+}
+
+.fix-stroke {
+    paint-order: stroke fill;
+}
