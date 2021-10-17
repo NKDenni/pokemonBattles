@@ -10,6 +10,8 @@ export function GameProvider ({ children }) {
 
     const [currentMonster, setCurrentMonster] = useState();     //TODO - create model for pokemon monster that's currently playing turn
     const [score, setScore] = useState();
+    const [playerTurnWin, setPlayerTurnWin] = useState(0);
+    const [enemyTurnWin, setEnemyTurnWin] = useState(0);
     const [monsters, setMonsters] = useState();                 //TODO - list of monsters to choose from.  May not need.
     const [loading, setLoading] = useState(true);               //use if we plan to call from the api to build the list of monsters and display them. I think this can be done at the view instead.
 
@@ -49,17 +51,48 @@ export function GameProvider ({ children }) {
         return winner;
     }
 
-    const play = (playerChoice) => {
+    const playTurn = (playerChoice) => {
         const winner = getWinnerOfTurn(playerChoice);
         const thisGameTurn = { ...GameObject };
         thisGameTurn.winner = winner;
 
         if(winner === 'player'){
-            // setScore(score + 1);
-            setScore(score + 1);
+            updatePlayerScore(true);
+            thisGameTurn.score = score + 1;
+        } else if( winner === 'enemy'){
+            updatePlayerScore();
+            thisGameTurn.score = score - 1;
         }
 
         return thisGameTurn;
+    }
+
+    const updatePlayerScore = (playerScored = false) => {
+        if(playerScored) {
+            setScore(score + 1);
+            setPlayerTurnWin(playerTurnWin + 1);
+        } else {
+            setScore( score - 1);
+            setEnemyTurnWin( enemyTurnWin + 1);
+        }
+    }
+
+    const resetGame = () => {
+        setPlayerTurnWin(0);
+        setEnemyTurnWin(0);
+    }
+
+    const checkWinner = (winThreshold = 3) => {
+        let winner = "";
+        
+        if(playerTurnWin >= winThreshold){
+            winner = "player";
+        } else if (enemyTurnWin >= winThreshold)
+        {
+            winner =  "enemy";
+        }
+
+        return winner;
     }
 
     useEffect(() => {
@@ -71,7 +104,9 @@ export function GameProvider ({ children }) {
     //pass objects and methods through
     const value = {
         currentMonster,
-        play,
+        playTurn,
+        resetGame,
+        checkWinner,
         score,
         monsters
     }
