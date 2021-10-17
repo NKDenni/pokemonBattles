@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { } from 'react';
 import './start.scss';
 // import axios from 'axios';
 
@@ -36,6 +36,7 @@ const Start= (props) => {
 
     return (
     <div>
+        <yellowButton text={"START"} />
         <div className="row">
             <div className="col d-flex flex-wrap justify-content-center">
                 <img className="text-center img-fluid pokemon" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'} alt="Bulbasaur" />
