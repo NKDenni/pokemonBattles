@@ -19,7 +19,7 @@ const YellowButton = (props) => {
                 color:`#0061ff`,
                 margin:`auto`,
                 fontSize:`20px`
-                }}><h2 style={{marginTop:`-10px`}}>{ text }</h2></button>
+                }}><h2 style={{marginBottom: `-8px`}}>{ text }</h2></button>
         </div>
     )
 }

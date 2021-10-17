@@ -1,5 +1,6 @@
 import React, { } from 'react';
 import './start.scss';
+// import YellowButton from './YellowButton';
 // import axios from 'axios';
 
 const Start= (props) => {
@@ -36,12 +37,12 @@ const Start= (props) => {
 
     return (
     <div>
-        <yellowButton text={"START"} />
+        {/* <YellowButton text={"START"} /> */}
         <div className="row">
-            <div className="col d-flex flex-wrap justify-content-center">
-                <img className="text-center img-fluid pokemon" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'} alt="Bulbasaur" />
-                <img className="text-center img-fluid pokemon" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'} alt="Charmander" />
-                <img className="text-center img-fluid pokemon" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'} alt="Squirtle" />
+            <div className="col p-0 d-flex flex-wrap justify-content-evenly">
+                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/1-bulbasaur.png'} alt="Bulbasaur" />
+                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/2-charmander.png'} alt="Charmander" />
+                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/3-squirtle.png'} alt="Squirtle" />
             </div>
         </div>
         <div className="row align-items-center choice">Choose your starter!</div>
@@ -78,7 +79,7 @@ const Start= (props) => {
             })} */}
         </div>
         <div className="col">
-                <img className="text-center pokemon" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'} alt="Pikachu" />
+                <img className="text-center pokemon" src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
         </div>
     </div>
     )
