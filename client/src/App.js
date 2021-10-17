@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import SideBySide from './views/sidebyside'
+import { GameProvider } from './context/GameContext';
 import './App.scss';
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
         <Navbar />
       </div>
       <div>
-      <Router>
-          <SideBySide default path="/" />
-      </Router>
+        <GameProvider>
+          <Router>
+              <SideBySide default path="/" />
+          </Router>
+        </GameProvider>
       </div>
       <div>
         <Footer />
