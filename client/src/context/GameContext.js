@@ -49,14 +49,14 @@ export function GameProvider ({ children }) {
         return winner;
     }
 
-    const play = (playerChoice) => {
+    const playTurn = (playerChoice) => {
         const winner = getWinnerOfTurn(playerChoice);
         const thisGameTurn = { ...GameObject };
         thisGameTurn.winner = winner;
 
         if(winner === 'player'){
-            // setScore(score + 1);
             setScore(score + 1);
+            thisGameTurn.score = score + 1;
         }
 
         return thisGameTurn;
@@ -71,7 +71,7 @@ export function GameProvider ({ children }) {
     //pass objects and methods through
     const value = {
         currentMonster,
-        play,
+        playTurn,
         score,
         monsters
     }

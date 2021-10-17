@@ -3,13 +3,13 @@ import './actions.scss';
 import { useGame } from '../context/GameContext';
 
 const Actions = (props) => {
-    const { play, score } = useGame();
+    const { playTurn, score } = useGame();
     const [winner, setWinner] = useState('');
 
     const handlePlay = (e) => {
         setWinner('');
-        const turnWinner = play('paper');
-        setWinner(`winner: ${turnWinner.winner} score: ${score}`);
+        const turnWinner = playTurn('paper');
+        setWinner(`winner: ${turnWinner.winner} score: ${turnWinner.score}`);
     }
 
     return (
