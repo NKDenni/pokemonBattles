@@ -11,10 +11,10 @@ const Monstercard = (props) => {
                 <hr className="my-2"/>
             </div>
             <div className="row px-5">
-                <img className="pokemon border border-dark p-0" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'} alt="Pikachu" />
+                <img className="monster border border-dark p-0" src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'} alt="Pikachu" />
                 <div className="col">
                     <div className="row">
-                        <p>Type</p>
+                        <p>Type: {props.type}</p>
                     </div>
                     <div className="row">
 

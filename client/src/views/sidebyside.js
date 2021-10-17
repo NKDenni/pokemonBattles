@@ -1,6 +1,6 @@
 import React from 'react';
-// import Welcome from '../components/welcome';
-// import Start from '../components/start';
+import Welcome from '../components/welcome';
+import Start from '../components/start';
 import Actions from '../components/actions';
 import Monstercard from '../components/monstercard';
 
