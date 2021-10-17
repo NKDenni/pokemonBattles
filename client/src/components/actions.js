@@ -17,7 +17,7 @@ const Actions = (props) => {
         console.log(`winner: ${winner}`);
     }
 
-    const handleGameReset = () => {
+    const handleGameReset = (e) => {
         resetGame();
     }
 
