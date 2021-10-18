@@ -1,8 +1,12 @@
-.box {
+.sidebyside {
     height: 650px;
     max-width: 580px;
     min-width: 350px;
     border: solid 1px black;
     border-radius: 45px;
+}
 
+.stacked {
+    border: solid 1px black;
+    border-radius: 45px;
 }

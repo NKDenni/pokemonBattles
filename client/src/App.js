@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import SideBySide from './views/sidebyside'
+import Stacked from './views/stacked'
 import { GameProvider } from './context/GameContext';
 import './App.scss';
 
@@ -16,10 +17,11 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="row">
         <GameProvider>
           <Router>
               <SideBySide default path="/" />
+              <Stacked path="/battle" />
           </Router>
         </GameProvider>
       </div>
