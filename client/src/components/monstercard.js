@@ -9,7 +9,7 @@ const Monstercard = (props) => {
             <div className="px-5">
                 <h1 className="my-3">You got "XXXXXX"!</h1>
                 <div className="px-0">
-                    <hr className="my-2"/>
+                    <hr className="mt-2 mb-0"/>
                 </div>
             </div>
             <div className="row px-5">
