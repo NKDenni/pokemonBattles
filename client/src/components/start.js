@@ -40,9 +40,9 @@ const Start= (props) => {
         {/* <YellowButton text={"START"} /> */}
         <div className="row">
             <div className="col p-0 d-flex flex-wrap justify-content-evenly">
-                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/1-bulbasaur.png'} alt="Bulbasaur" />
-                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/2-charmander.png'} alt="Charmander" />
-                    <img className="text-center img-fluid pokemon" src={'./img/pokemon/3-squirtle.png'} alt="Squirtle" />
+                    <img className="pokemon text-center img-fluid" src={'./img/pokemon/1-bulbasaur.png'} alt="Bulbasaur" />
+                    <img className="pokemon text-center img-fluid" src={'./img/pokemon/2-charmander.png'} alt="Charmander" />
+                    <img className="pokemon text-center img-fluid" src={'./img/pokemon/3-squirtle.png'} alt="Squirtle" />
             </div>
         </div>
         <div className="row align-items-center choice">Choose your starter!</div>
