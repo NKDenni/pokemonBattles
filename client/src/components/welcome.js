@@ -5,7 +5,7 @@ import './welcome.scss';
 const Welcome = (props) => {
 
     return (
-    <div>
+    <div className="row d-flex align-content-center">
         <div className="row d-flex justify-content-center battles">Welcome</div>
         <div className="my-4 row align-items-center">
             <div className="col battles">to</div>
