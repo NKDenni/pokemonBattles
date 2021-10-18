@@ -1,8 +1,7 @@
 import React from 'react';
 import Battle from '../components/battle';
 import Signboard from '../components/signboard';
-import Actions from '../components/actions';
-import Monstercard from '../components/monstercard';
+import Learn from '../components/learn';
 
 import './views.scss';
 
@@ -13,7 +12,8 @@ const SideBySide = (props) => {
                 <Signboard />
             </div>
             <div className="stacked col mt-4" style={{ minHeight: `500px`}}>
-                <Battle />
+                {/* <Battle /> */}
+                <Learn />
             </div>
         </div>
     )
