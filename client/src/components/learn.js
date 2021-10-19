@@ -3,6 +3,7 @@ import './battle.scss';
 
 
 const Battle = (props) => {
+    const {level} = props;
 
     return (
         <div className="my-5 mx-3 row d-flex flex-row justify-content-evenly" >
@@ -88,7 +89,7 @@ const Battle = (props) => {
                         <div className="px-0">
                             <hr className="mt-2 mb-1" />
                         </div>
-                        <div className="row d-flex p-0 m-0 flex-row">
+                        <div className="row d-flex p-0 m-0 flex-row text-muted">
                             <p className="col-sm-2 text-start p-0 mb-0">Lvl: 15{props.movelvl2}</p>
                             <p className="col text-start p-0 mb-0">Leer {props.movename2}</p>
                             <p className="col text-center p-0 mb-0">Power: --{props.attack2}</p>
@@ -97,7 +98,7 @@ const Battle = (props) => {
                         <div className="px-0">
                             <hr className="mt-2 mb-1" />
                         </div>
-                        <div className="row d-flex p-0 m-0 flex-row">
+                        <div className="row d-flex p-0 m-0 flex-row text-muted">
                             <p className="col-sm-2 text-start p-0 mb-0">Lvl: 22{props.movelvl3}</p>
                             <p className="col text-start p-0 mb-0">Rage {props.movename3}</p>
                             <p className="col text-center p-0 mb-0">Power: 20{props.attack3}</p>
@@ -106,7 +107,7 @@ const Battle = (props) => {
                         <div className="px-0">
                             <hr className="mt-2 mb-1" />
                         </div>
-                        <div className="row d-flex p-0 m-0 flex-row">
+                        <div className="row d-flex p-0 m-0 flex-row text-muted">
                             <p className="col-sm-2 text-start p-0 mb-0">Lvl: 30{props.movelvl4}</p>
                             <p className="col text-start p-0 mb-0">Slash {props.movename4}</p>
                             <p className="col text-center p-0 mb-0">Power: 70{props.attack4}</p>
@@ -115,7 +116,7 @@ const Battle = (props) => {
                         <div className="px-0">
                             <hr className="mt-2 mb-1" />
                         </div>
-                        <div className="row d-flex p-0 m-0 flex-row">
+                        <div className="row d-flex p-0 m-0 flex-row text-muted">
                             <p className="col-sm-2 text-start p-0 mb-0">Lvl: 38{props.movelvl4}</p>
                             <p className="col text-start p-0 mb-0">Flamethrower {props.movename4}</p>
                             <p className="col text-center p-0 mb-0">Power: 90{props.attack4}</p>
@@ -124,7 +125,7 @@ const Battle = (props) => {
                         <div className="px-0">
                             <hr className="mt-2 mb-1" />
                         </div>
-                        <div className="row d-flex p-0 m-0 flex-row">
+                        <div className="row d-flex p-0 m-0 flex-row text-muted">
                             <p className="col-sm-2 text-start p-0 mb-0">Lvl: 46{props.movelvl4}</p>
                             <p className="col text-start p-0 mb-0">Fire Spin {props.movename4}</p>
                             <p className="col text-center p-0 mb-0">Power: 35{props.attack4}</p>

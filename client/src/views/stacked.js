@@ -17,8 +17,8 @@ const SideBySide = (props) => {
                 <Signboard message={message}/>
             </div>
             <div className="stacked col mt-4" style={{ minHeight: `500px`}}>
-                <Battle message={message} setMessage={setMessage}/>
-                {/* <Learn message={message} setMessage={setMessage} /> */}
+                {/* <Battle message={message} setMessage={setMessage}/> */}
+                <Learn message={message} setMessage={setMessage} />
             </div>
         </div>
     )
