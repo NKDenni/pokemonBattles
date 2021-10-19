@@ -18,20 +18,19 @@ const Actions = (props) => {
     }
 
     const handleGameReset = (e) => {
-        resetGame();
     }
 
     return (
         <div className="d-flex flex-column justify-content-center">
             { winner }
             <div className="row col my-2">
-                <button className="text-center" onClick= { handleGameReset }>Change Appearance</button>
+                <button className="action text-center" onClick= { handleGameReset }>Change Appearance</button>
             </div>
             <div className="row col my-2">
-                <button className="text-center" onClick={ handlePlay }>Battle</button>
+                <button className="action text-center" onClick={ handlePlay }>Battle</button>
             </div>
             <div className="row col my-2">
-                <button className="text-center" onClick={ handleCheckWin }>Learn Moves</button>
+                <button className="action text-center" onClick={ handleCheckWin }>Learn Moves</button>
             </div>
         </div>
     )
