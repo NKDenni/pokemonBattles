@@ -10,12 +10,12 @@ const SideBySide = (props) => {
     return (
         <div className="row justify-content-evenly">
             <div className="sidebyside m-3 col d-flex align-items-stretch justify-content-center align-content-evenly">
-                <Welcome />
-                {/* <Monstercard /> */}
+                {/* <Welcome /> */}
+                <Monstercard />
             </div>
             <div className="sidebyside m-3 col d-flex align-items-center justify-content-center align-content-around">
-                <Start />
-                {/* <Actions /> */}
+                {/* <Start /> */}
+                <Actions />
             </div>
         </div>
     )
