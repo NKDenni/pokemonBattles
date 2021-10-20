@@ -3,11 +3,12 @@ import './monstercard.scss';
 
 
 const Monstercard = (props) => {
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor } = props;
 
     return (
         <div className="monstercard row justify-content-center align-content-sm-between">
             <div className="px-5">
-                <h1 className="my-3">You got "XXXXXX"!</h1>
+                <h1 className="my-3">You got <span className="text-capitalize">{player.name}</span>!</h1>
                 <div className="px-0">
                     <hr className="mt-2 mb-0"/>
                 </div>
@@ -16,20 +17,20 @@ const Monstercard = (props) => {
                 <img className="text-center monster" src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
                 <div className="col d-flex flex-column justify-content-evenly">
                     <div className="row">
-                        <p className="col text-start pe-0 mb-1">Type: Electric{props.type}</p>
-                        <p className="col-sm-4 text-end p-0 mb-1">#: 25{props.number}</p>
+                        <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{ptype}</span></p>
+                        <p className="col-sm-4 text-end p-0 mb-1">#: {player.id}</p>
                     </div>
                     <div className="row">
-                        <p className="col text-start pe-0 mb-1">HP: 35{props.health}</p>
-                        <p className="col text-end p-0 mb-1">Speed: 50{props.speed}</p>
+                        <p className="col text-start pe-0 mb-1">HP: {phealth}</p>
+                        <p className="col text-end p-0 mb-1">Speed: {pspeed}</p>
                     </div>
                     <div className="row">
-                        <p className="col text-start pe-0 mb-1">Attack: 50{props.attack}</p>
-                        <p className="col text-end p-0 mb-1">Defense: 40{props.defense}</p>
+                        <p className="col text-start pe-0 mb-1">Attack: {pattack}</p>
+                        <p className="col text-end p-0 mb-1">Defense: {pdefense}</p>
                     </div>
                     <div className="row">
-                        <p className="col text-start pe-0 mb-1">S-Att: 50{props.satt}</p>
-                        <p className="col text-end p-0 mb-1">S-Def: 50{props.sdef}</p>
+                        <p className="col text-start pe-0 mb-1">S-Att: {psatt}</p>
+                        <p className="col text-end p-0 mb-1">S-Def: {psdef}</p>
                     </div>
                 </div>
             </div>
@@ -38,7 +39,7 @@ const Monstercard = (props) => {
             </div>
             <div className="row d-flex flex-row px-5">
                 <h2 className="col-sm-3 mb-0 text-start">Moves</h2>
-                <p className="flavor col p-0 mb-0 text-center text-muted">{props.flavor}When several of these POKéMON gather, their electricity could build and cause lightning storms.</p>
+                <p className="flavor col p-0 mb-0 text-center text-muted">{pflavor}</p>
             </div>
             <div className="row px-5">
                 <div className="px-0">
@@ -81,7 +82,7 @@ const Monstercard = (props) => {
                 <div className="row d-flex p-0 m-0 flex-row justify-content-center">
                     <p className="col-sm-4 text-start p-0 mb-0">Height: 4{props.height}</p>
                     <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
-                    <p className="col-sm-4 text-end p-0 mb-0">Weight: 50{props.weight}</p>
+                    <p className="col-sm-4 text-end p-0 mb-0">Weight: 60{props.weight}</p>
                 </div>
             </div>
         </div>
