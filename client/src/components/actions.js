@@ -3,6 +3,7 @@ import './actions.scss';
 import { useGame } from '../context/GameContext';
 
 const Actions = (props) => {
+    const {player} = props;
     const { playTurn, checkWinner, resetGame } = useGame();         //grab the methods and game properties
     const [winner, setWinner] = useState('');
 
@@ -17,14 +18,18 @@ const Actions = (props) => {
         console.log(`winner: ${winner}`);
     }
 
-    const handleGameReset = (e) => {
+    // const handleGameReset = (e) => {
+    // }
+
+    const handleAppearance = (e) => {
+
     }
 
     return (
         <div className="d-flex flex-column justify-content-center">
             { winner }
             <div className="row col my-2">
-                <button className="action text-center" onClick= { handleGameReset }>Change Appearance</button>
+                <button className="action text-center" onClick= { handleAppearance }>Change Appearance</button>
             </div>
             <div className="row col my-2">
                 <button className="action text-center" onClick={ handlePlay }>Battle</button>
