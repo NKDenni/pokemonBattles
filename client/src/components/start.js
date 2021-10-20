@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Start= (props) => {
 
-    const { player, setPlayer, ptype, setPtype, phealth, setPhealth, pattack, setPattack, pdefense, setPdefense, psatt, setPsatt, psdef, setPsdef, pspeed, setPspeed, pflavor, setPflavor} = props;
+    const { setPlayer, setPtype, setPhealth, setPattack, setPdefense, setPsatt, setPsdef, setPspeed, setPflavor} = props;
 
     const [pokeballs, setPokeballs] = useState([]);
 
@@ -15,21 +15,21 @@ const Start= (props) => {
         }
         Promise.all(promises)
             .then(res =>{
-                console.log(res);
+                // console.log(res);
                 const balls = res.map((item) => {
                     return item.data.sprites.default
                 })
-                console.log(balls);
+                // console.log(balls);
                 setPokeballs(balls);
             })
 
     }, [])
 
-    const handleBulbasaur = (e) =>{
+    const handleBulbasaur = () =>{
         console.log('Bulbasaur')
         axios.get('https://pokeapi.co/api/v2/pokemon/bulbasaur')
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setPhealth(res.data.stats[0].base_stat);
                 setPattack(res.data.stats[1].base_stat);
                 setPdefense(res.data.stats[2].base_stat);
@@ -53,11 +53,11 @@ const Start= (props) => {
             })
     }
 
-    const handleCharmander = (e) => {
+    const handleCharmander = () => {
         console.log('Charmander')
         axios.get('https://pokeapi.co/api/v2/pokemon/charmander')
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setPhealth(res.data.stats[0].base_stat);
                 setPattack(res.data.stats[1].base_stat);
                 setPdefense(res.data.stats[2].base_stat);
@@ -81,11 +81,11 @@ const Start= (props) => {
             })
     }
 
-    const handleSquirtle = (e) => {
+    const handleSquirtle = () => {
         console.log('Squirtle')
         axios.get('https://pokeapi.co/api/v2/pokemon/squirtle')
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setPhealth(res.data.stats[0].base_stat);
                 setPattack(res.data.stats[1].base_stat);
                 setPdefense(res.data.stats[2].base_stat);
@@ -109,16 +109,16 @@ const Start= (props) => {
             })
     }
 
-    const handlePikachu = (e) => {
+    const handlePikachu = () => {
         console.log('Pikachu')
         axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
             .then((res) => {
-                console.log(res.data);
-                console.log(res.data.name);
-                console.log(res.data.id);
-                console.log(res.data.stats[0].base_stat);
-                console.log(res.data.stats[1].base_stat);
-                console.log(res.data.types[0].type.name);
+                // console.log(res.data);
+                // console.log(res.data.name);
+                // console.log(res.data.id);
+                // console.log(res.data.stats[0].base_stat);
+                // console.log(res.data.stats[1].base_stat);
+                // console.log(res.data.types[0].type.name);
                 setPhealth(res.data.stats[0].base_stat);
                 setPattack(res.data.stats[1].base_stat);
                 setPdefense(res.data.stats[2].base_stat);
@@ -142,24 +142,24 @@ const Start= (props) => {
             })
     }
 
-    console.log('Outside');
-    console.log(player);
-    console.log(ptype);
-    console.log(phealth);
-    console.log(pattack);
-    console.log(pdefense);
-    console.log(psatt);
-    console.log(psdef);
-    console.log(pspeed);
-    console.log(pflavor)
+    // console.log('Outside');
+    // console.log(player);
+    // console.log(ptype);
+    // console.log(phealth);
+    // console.log(pattack);
+    // console.log(pdefense);
+    // console.log(psatt);
+    // console.log(psdef);
+    // console.log(pspeed);
+    // console.log(pflavor)
 
     return (
     <div>
         <div className="row">
             <div className="col p-0 d-flex flex-wrap justify-content-evenly">
-                    <img className="pokemon text-center" onClick={handleBulbasaur} src={'./img/pokemon/1-bulbasaur.png'} alt="Bulbasaur" />
-                    <img className="pokemon text-center" onClick={handleCharmander} src={'./img/pokemon/2-charmander.png'} alt="Charmander" />
-                    <img className="pokemon text-center" onClick={handleSquirtle} src={'./img/pokemon/3-squirtle.png'} alt="Squirtle" />
+                    <img className="pokemon text-center" onClick={handleBulbasaur} src={'./img/pokemon/bulbasaur/1-bulbasaur.png'} alt="Bulbasaur" />
+                    <img className="pokemon text-center" onClick={handleCharmander} src={'./img/pokemon/charmander/1-charmander.png'} alt="Charmander" />
+                    <img className="pokemon text-center" onClick={handleSquirtle} src={'./img/pokemon/squirtle/1-squirtle.png'} alt="Squirtle" />
             </div>
         </div>
         <div className="row align-items-center choice">Choose your starter!</div>
@@ -171,7 +171,7 @@ const Start= (props) => {
             })}
         </div>
         <div className="col">
-                <img className="text-center pokemon" onClick={handlePikachu} src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
+                <img className="text-center pokemon" onClick={handlePikachu} src={'./img/pokemon/pikachu/1-pikachu.png'} alt="Pikachu" />
         </div>
     </div>
     )

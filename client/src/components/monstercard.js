@@ -14,7 +14,7 @@ const Monstercard = (props) => {
                 </div>
             </div>
             <div className="row px-5">
-                <img className="text-center monster" src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
+                <img className="text-center monster" src={`./img/pokemon/4-pikachu.png`} alt="Pikachu" />
                 <div className="col d-flex flex-column justify-content-evenly">
                     <div className="row">
                         <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{ptype}</span></p>
@@ -80,9 +80,9 @@ const Monstercard = (props) => {
                     <hr className="mt-2 mb-2" />
                 </div>
                 <div className="row d-flex p-0 m-0 flex-row justify-content-center">
-                    <p className="col-sm-4 text-start p-0 mb-0">Height: 4{props.height}</p>
+                    <p className="col-sm-4 text-start p-0 mb-0">Height: {player.height}</p>
                     <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
-                    <p className="col-sm-4 text-end p-0 mb-0">Weight: 60{props.weight}</p>
+                    <p className="col-sm-4 text-end p-0 mb-0">Weight: {player.weight}</p>
                 </div>
             </div>
         </div>
