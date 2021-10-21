@@ -2,15 +2,27 @@ import React, { useState, useEffect } from 'react';
 import YellowButton from "./YellowButton";
 import { navigate } from '@reach/router';
 import { useGame } from '../context/GameContext';
+import { motion, useAnimation, transform } from "framer-motion";
 
+const toSpringVelocity = transform([0, 5], [50, 0]);
 
 const Signboard = (props) => {
     const [message, setMessage] = useState();
+    const controls = useAnimation();
     const { resetGame } = useGame(); 
 
     useEffect(() => {
         setMessage(props.message)
-    }, [props.message])
+        controls.start({
+            scale: 1,
+            transition: {
+              type: "spring",
+              velocity: toSpringVelocity(0),
+              stiffness: 700,
+              damping: 80
+            }
+          });
+    }, [props.message, props.score])
 
     const handleClick = (e) => {
         resetGame();
@@ -19,8 +31,10 @@ const Signboard = (props) => {
 
     return (
     <div className="row d-flex align-content-center">
-            <div className="col battles" style={{marginBottom:"25px"}}>{message}</div>
-            { props.gameOver && <YellowButton text="BACK" handleClick={handleClick}/> }
+            <motion.span animate={controls}>
+                <div className="col battles" style={{marginBottom:"25px"}}>{message}</div>
+            </motion.span>
+            { props.gameOver && <YellowButton text="BACK" handleClick={ handleClick }/> }
     </div>
     )
 }

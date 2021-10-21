@@ -15,6 +15,7 @@ const Battle = (props) => {
         } else {
             props.handleMessageUpdate(`${turnWinner.winner} wins this turn!`);
         }
+        props.handleScoreUpdate(turnWinner.score);
         CheckGameWinner();
     }
 
