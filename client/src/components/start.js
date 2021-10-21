@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Start= (props) => {
 
-    const { setPlayer, setPtype, setPhealth, setPattack, setPdefense, setPsatt, setPsdef, setPspeed, setPflavor} = props;
+    const { setPlayer, setPtype, setPhealth, setPattack, setPdefense, setPsatt, setPsdef, setPspeed, setPflavor, setSelected} = props;
 
     const [pokeballs, setPokeballs] = useState([]);
 
@@ -51,6 +51,7 @@ const Start= (props) => {
             .catch((err) => {
                 console.log(err);
             })
+        setSelected(true);
     }
 
     const handleCharmander = () => {
