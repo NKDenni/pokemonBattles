@@ -1,25 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './actions.scss';
-import { useGame } from '../context/GameContext';
+import { navigate } from '@reach/router';
 
 const Actions = (props) => {
     const {player} = props;
-    const { playTurn, checkWinner, resetGame } = useGame();         //grab the methods and game properties
-    const [winner, setWinner] = useState('');
-
-    const handlePlay = (e) => {
-        setWinner('');
-        const turnWinner = playTurn('paper');
-        setWinner(`winner: ${turnWinner.winner} score: ${turnWinner.score}`);
-    }
-
-    const handleCheckWin = (e) => {
-        const winner = checkWinner();
-        console.log(`winner: ${winner}`);
-    }
-
-    // const handleGameReset = (e) => {
-    // }
 
     const handleAppearance = (e) => {
 
@@ -32,15 +16,14 @@ const Actions = (props) => {
 
     return (
         <div className="d-flex flex-column justify-content-center">
-            { winner }
             <div className="row col my-2">
                 <button className="action text-center" onClick= { handleAppearance }>Change Appearance</button>
             </div>
             <div className="row col my-2">
-                <button className="action text-center" onClick={ handlePlay }>Battle</button>
+                <button className="action text-center" onClick={ e => navigate("/battle") }>Battle</button>
             </div>
             <div className="row col my-2">
-                <button className="action text-center" onClick={ handleCheckWin }>Learn Moves</button>
+                <button className="action text-center" >Learn Moves</button>
             </div>
         </div>
     )

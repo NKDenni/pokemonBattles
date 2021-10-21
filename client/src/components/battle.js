@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './battle.scss';
-
+import { useGame } from '../context/GameContext';
+import { navigate } from '@reach/router';
 
 const Battle = (props) => {
+    const { playTurn, checkWinner } = useGame(); 
+    const [playing, setPlaying] = useState(true);
+
+    const handlePlay = (e) => {
+        // setMessage('');
+        const turnWinner = playTurn('paper');
+        if(turnWinner.winner === "draw"){
+            props.handleMessageUpdate(`A ${turnWinner.winner}!`);
+        } else {
+            props.handleMessageUpdate(`${turnWinner.winner} wins this turn!`);
+        }
+        CheckGameWinner();
+    }
+
+    const CheckGameWinner = () => {
+        const winner = checkWinner();
+        if(winner !== "")
+        {
+            props.handleMessageUpdate(`${winner} wins!`);
+            props.handleGameOver(true);
+            if(winner === "player")
+                props.updatePlayerStats("level", props.playerStats.level + 1);
+        }
+    }
 
     const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor } = props;
 
@@ -36,7 +61,7 @@ const Battle = (props) => {
                             <hr className="mt-0 mb-1" />
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row">
-                            <p className="col-sm-5 text-start p-0 mb-0"><button className="att px-3">Growl{props.move1}</button></p>
+                            <p className="col-sm-5 text-start p-0 mb-0"><button disabled={!playing} className="att px-3" onClick={handlePlay}>Growl{props.move1}</button></p>
                             <p className="col-sm-4 text-center p-0 mb-0">Power: --{props.attack1}</p>
                             <p className="col-sm-3 text-end p-0 mb-0">Acc: 100{props.accuracy1}</p>
                         </div>
@@ -44,7 +69,7 @@ const Battle = (props) => {
                             <hr className="mt-2 mb-1" />
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row">
-                            <p className="col-sm-5 text-start p-0 mb-0"><button className="att px-3">Thunder shock{props.move2}</button></p>
+                            <p className="col-sm-5 text-start p-0 mb-0"><button disabled={!playing} className="att px-3" onClick={handlePlay}>Thunder shock{props.move2}</button></p>
                             <p className="col-sm-4 text-center p-0 mb-0">Power: 50{props.attack2}</p>
                             <p className="col-sm-3 text-end p-0 mb-0">Acc: 100{props.accuracy2}</p>
                         </div>
@@ -70,9 +95,9 @@ const Battle = (props) => {
                             <hr className="mt-2 mb-2" />
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row justify-content-center">
-                            <p className="col-sm-4 text-start p-0 mb-0">Height: {player.height}</p>
-                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
-                            <p className="col-sm-4 text-end p-0 mb-0">Weight: {player.weight}</p>
+                            <p className="col-sm-4 text-start p-0 mb-0">Height: 4{props.height}</p>
+                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: {props.playerStats.level}</p>
+                            <p className="col-sm-4 text-end p-0 mb-0">Weight: 50{props.weight}</p>
                         </div>
                     </div>
                 </div>
