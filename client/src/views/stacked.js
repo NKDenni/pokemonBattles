@@ -15,11 +15,15 @@ const SideBySide = (props) => {
     }
 
     const [message, setMessage] = useState('Begin Battle!');
+    const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(false);
     const [playerStats, setPlayerStats] = useState({...playerBaseStats});
 
     const handleMessageUpdate = (msg) => {
         setMessage(msg);
+    }
+    const handleScoreUpdate = (value) => {
+        setScore(value);
     }
 
     const handleGameOver = (value) => {
@@ -35,11 +39,13 @@ const SideBySide = (props) => {
     return (
         <div className="p-4 row d-flex flex-column justify-content-center">
             <div className="stacked col d-flex align-items-stretch justify-content-center align-content-evenly" style={{ minHeight: `200px` }}>
-                <Signboard message={message} gameOver={gameOver}/>
+                <Signboard message={message} gameOver={gameOver} score={score}/>
             </div>
             <div className="stacked col mt-4" style={{ minHeight: `500px`}}>
+
                 <Battle 
-                handleMessageUpdate= { handleMessageUpdate } 
+                handleMessageUpdate= { handleMessageUpdate }
+                handleScoreUpdate={ handleScoreUpdate }
                 handleGameOver={ handleGameOver } 
                 updatePlayerStats={ updatePlayerStats } 
                 playerStats={ playerStats }
