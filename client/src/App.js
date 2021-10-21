@@ -18,6 +18,16 @@ function App() {
   const [psdef, setPsdef] = useState("");
   const [pspeed, setPspeed] = useState("");
   const [pflavor, setPflavor] = useState("");
+  const [selected, setSelected] = useState(false);
+
+  const [eplayer, setEplayer] = useState({});
+  const [etype, setEtype] = useState("");
+  const [ehealth, setEhealth] = useState("");
+  const [eattack, setEattack] = useState("");
+  const [edefense, setEdefense] = useState("");
+  const [esatt, setEsatt] = useState("");
+  const [esdef, setEsdef] = useState("");
+  const [espeed, setEspeed] = useState("");
 
   return (
     <div className="App container">
@@ -27,8 +37,8 @@ function App() {
       <div className="row">
         <GameProvider>
           <Router>
-            <SideBySide default path="/" player={player} setPlayer={setPlayer} ptype={ptype} setPtype={setPtype} phealth={phealth} setPhealth={setPhealth} pattack={pattack} setPattack={setPattack} pdefense={pdefense} setPdefense={setPdefense} psatt={psatt} setPsatt={setPsatt} psdef={psdef} setPsdef={setPsdef} pspeed={pspeed} setPspeed={setPspeed} pflavor={pflavor} setPflavor={setPflavor}/>
-            <Stacked path="/battle" player={player} ptype={ptype} phealth={phealth} pattack={pattack} pdefense={pdefense} psatt={psatt} phealth={psdef} pspeed={pspeed} pflavor={pflavor}/>
+            <SideBySide default path="/" {...{ player, setPlayer, ptype, setPtype, phealth, setPhealth, pattack, setPattack, pdefense, setPdefense, psatt, setPsatt, psdef, setPsdef, pspeed, setPspeed, pflavor, setPflavor, selected, setSelected, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer}} />
+            <Stacked path="/battle" {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, selected, setSelected, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }} />
           </Router>
         </GameProvider>
       </div>
