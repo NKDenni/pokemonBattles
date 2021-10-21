@@ -24,6 +24,7 @@ const Battle = (props) => {
         {
             props.handleMessageUpdate(`${winner} wins!`);
             props.handleGameOver(true);
+            setPlaying(false);
             if(winner === "player")
                 props.updatePlayerStats("level", props.playerStats.level + 1);
         }
