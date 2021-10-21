@@ -29,28 +29,30 @@ const Battle = (props) => {
         }
     }
 
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor } = props;
+
     return (
         <div className="my-5 mx-3 row d-flex flex-row justify-content-evenly" >
             <div className="col-sm-6">
                 <div className="row d-flex align-items-around align-content-around justify-content-center">
                     <div className="row px-5">
-                        <img className="text-center monster" src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
+                        <img className="text-center monster" src={`./img/pokemon/${player.name}/1-${player.name}.png`} alt={player.name} />
                         <div className="col d-flex flex-column justify-content-evenly">
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">Type: Electric{props.type}</p>
-                                <p className="col-sm-4 text-end p-0 mb-1">#: 25{props.number}</p>
+                                <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{ptype}</span></p>
+                                <p className="col-sm-4 text-end p-0 mb-1">#: {player.id}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">HP: 35{props.health}</p>
-                                <p className="col text-end p-0 mb-1">Speed: 50{props.speed}</p>
+                                <p className="col text-start pe-0 mb-1">HP: {phealth}</p>
+                                <p className="col text-end p-0 mb-1">Speed: {pspeed}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">Attack: 50{props.attack}</p>
-                                <p className="col text-end p-0 mb-1">Defense: 40{props.defense}</p>
+                                <p className="col text-start pe-0 mb-1">Attack: {pattack}</p>
+                                <p className="col text-end p-0 mb-1">Defense: {pdefense}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">S-Att: 50{props.satt}</p>
-                                <p className="col text-end p-0 mb-1">S-Def: 50{props.sdef}</p>
+                                <p className="col text-start pe-0 mb-1">S-Att: {psatt}</p>
+                                <p className="col text-end p-0 mb-1">S-Def: {psdef}</p>
                             </div>
                         </div>
                     </div>
