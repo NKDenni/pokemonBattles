@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './battle.scss';
-
+import { useGame } from '../context/GameContext';
+import { navigate } from '@reach/router';
 
 const Battle = (props) => {
+    const { playTurn, checkWinner, resetGame } = useGame();         //grab the methods and game properties
+    const [winner, setWinner] = useState('');
+
+    const handlePlay = (e) => {
+        setWinner('');
+        const turnWinner = playTurn('paper');
+        setWinner(`winner: ${turnWinner.winner} score: ${turnWinner.score}`);
+    }
+
+    const handleCheckWin = (e) => {
+        const winner = checkWinner();
+        console.log(`winner: ${winner}`);
+    }
 
     return (
         <div className="my-5 mx-3 row d-flex flex-row justify-content-evenly" >
