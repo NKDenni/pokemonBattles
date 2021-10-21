@@ -4,6 +4,8 @@ import { useGame } from '../context/GameContext';
 import { navigate } from '@reach/router';
 
 const Battle = (props) => {
+    const { playerStats, player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed } = props;
+
     const { playTurn, checkWinner } = useGame(); 
     const [playing, setPlaying] = useState(true);
 
@@ -28,11 +30,9 @@ const Battle = (props) => {
             props.handleGameOver(true);
             setPlaying(false);
             if(winner === "player")
-                props.updatePlayerStats("level", props.playerStats.level + 1);
+                props.updatePlayerStats("level", playerStats.level + 1);
         }
     }
-
-    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed  } = props;
 
     return (
         <div className="my-5 mx-3 row d-flex flex-row justify-content-evenly" >
@@ -98,9 +98,9 @@ const Battle = (props) => {
                             <hr className="mt-2 mb-2" />
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row justify-content-center">
-                            <p className="col-sm-4 text-start p-0 mb-0">Height: 4{props.height}</p>
-                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: {props.playerStats.level}</p>
-                            <p className="col-sm-4 text-end p-0 mb-0">Weight: 50{props.weight}</p>
+                            <p className="col-sm-4 text-start p-0 mb-0">Height: {player.height}</p>
+                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: {playerStats.level}</p>
+                            <p className="col-sm-4 text-end p-0 mb-0">Weight: {player.weight}</p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ const Battle = (props) => {
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row justify-content-center">
                             <p className="col-sm-4 text-start p-0 mb-0">Height: {eplayer.height}</p>
-                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: {props.level}</p>
+                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
                             <p className="col-sm-4 text-end p-0 mb-0">Weight: {eplayer.weight}</p>
                         </div>
                     </div>
