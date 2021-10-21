@@ -80,6 +80,7 @@ const Start= (props) => {
             .catch((err) => {
                 console.log(err);
             })
+        setSelected(true);
     }
 
     const handleSquirtle = () => {
@@ -108,6 +109,7 @@ const Start= (props) => {
             .catch((err) => {
                 console.log(err);
             })
+        setSelected(true);
     }
 
     const handlePikachu = () => {
@@ -141,6 +143,7 @@ const Start= (props) => {
             .catch((err) => {
                 console.log(err);
             })
+        setSelected(true);
     }
 
     // console.log('Outside');

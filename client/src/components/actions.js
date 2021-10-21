@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './actions.scss';
 import { navigate } from '@reach/router';
 import axios from 'axios';
 
 const Actions = (props) => {
-    const {player, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer} = props;
+    const {player, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer, pic, setPic} = props;
 
     const handleBattle = (e) => {
         const names = ['bulbasaur', 'charmander', 'squirtle', 'pikachu'];
@@ -29,15 +29,18 @@ const Actions = (props) => {
     }
 
     const handleAppearance = (e) => {
-
-        // player.name === pikachu?
-        // max 4
-        // else max 2
-        // default state 1
-        // on click var += 1
-        // if var > max set state to 1
-        // setstate = var
-        //
+        let i = pic;
+        let max = 0;
+        if (player.name === 'pikachu'){
+            max = 4;
+        } else {
+            max = 2;
+            }
+            if (i < max){
+                i += 1;
+            } else {i = 1;}
+        setPic(i);
+        
 
     }
 

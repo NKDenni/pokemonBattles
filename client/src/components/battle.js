@@ -4,7 +4,7 @@ import { useGame } from '../context/GameContext';
 import { navigate } from '@reach/router';
 
 const Battle = (props) => {
-    const { playerStats, player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed } = props;
+    const { playerStats, player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed, pic} = props;
 
     const { playTurn, checkWinner } = useGame(); 
     const [playing, setPlaying] = useState(true);
@@ -39,7 +39,7 @@ const Battle = (props) => {
             <div className="col-sm-6">
                 <div className="row d-flex align-items-around align-content-around justify-content-center">
                     <div className="row px-5">
-                        <img className="text-center monster" src={`./img/pokemon/${player.name}/1-${player.name}.png`} alt={player.name} />
+                        <img className="text-center monster" src={`./img/pokemon/${player.name}/${pic}-${player.name}.png`} alt={player.name} />
                         <div className="col d-flex flex-column justify-content-evenly">
                             <div className="row">
                                 <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{ptype}</span></p>
