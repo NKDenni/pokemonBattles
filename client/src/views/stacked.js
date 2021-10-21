@@ -44,14 +44,16 @@ const SideBySide = (props) => {
             <div className="stacked col mt-4" style={{ minHeight: `500px`}}>
                 {battle?
                     <Battle 
-                handleMessageUpdate= { handleMessageUpdate }
-                handleScoreUpdate={ handleScoreUpdate }
-                handleGameOver={ handleGameOver } 
-                updatePlayerStats={ updatePlayerStats } 
-                playerStats={ playerStats }
-                {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
-                />:
-                    <Learn {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic}} />}
+                    handleMessageUpdate= { handleMessageUpdate }
+                    handleScoreUpdate={ handleScoreUpdate }
+                    handleGameOver={ handleGameOver } 
+                    updatePlayerStats={ updatePlayerStats } 
+                    playerStats={ playerStats }
+                    {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
+                    />:
+                    <Learn 
+                    {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic}} 
+                    />}
             </div>
         </div>
     )
