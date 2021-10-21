@@ -6,9 +6,7 @@ import Learn from '../components/learn';
 import './views.scss';
 
 const SideBySide = (props) => {
-    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic } = props;
-
-    const [battle, setBattle] = useState(false);
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic, battle} = props;
 
     const playerBaseStats = {
         ptype: "Electric",

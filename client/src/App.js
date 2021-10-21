@@ -29,6 +29,7 @@ function App() {
   const [esatt, setEsatt] = useState("");
   const [esdef, setEsdef] = useState("");
   const [espeed, setEspeed] = useState("");
+  const [battle, setBattle] =useState(false);
 
   return (
     <div className="App container">
@@ -40,11 +41,11 @@ function App() {
           <Router>
             <SideBySide 
             default path="/" 
-              {...{ player, setPlayer, ptype, setPtype, phealth, setPhealth, pattack, setPattack, pdefense, setPdefense, psatt, setPsatt, psdef, setPsdef, pspeed, setPspeed, pflavor, setPflavor, pic, setPic, selected, setSelected, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer}}
+              {...{ player, setPlayer, ptype, setPtype, phealth, setPhealth, pattack, setPattack, pdefense, setPdefense, psatt, setPsatt, psdef, setPsdef, pspeed, setPspeed, pflavor, setPflavor, pic, setPic, selected, setSelected, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer, setBattle}}
             />
             <Stacked 
             path="/battle" 
-            {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, selected, setSelected, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
+            {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, battle, selected, setSelected, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
             />
           </Router>
         </GameProvider>
