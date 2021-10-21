@@ -16,8 +16,8 @@ const SideBySide = (props) => {
                 <Monstercard player={player} ptype={ptype} phealth={phealth} pattack={pattack} pdefense={pdefense} psatt={psatt} psdef={psdef} pspeed={pspeed} pflavor={pflavor}/>
             </div>
             <div className="sidebyside m-3 col d-flex align-items-center justify-content-center align-content-around">
-                {/* <Start setPlayer={setPlayer} setPtype={setPtype} setPhealth={setPhealth} setPattack={setPattack}  setPdefense={setPdefense} setPsatt={setPsatt} setPsdef={setPsdef} setPspeed={setPspeed} setPflavor={setPflavor}/> */}
-                <Actions player={player}/>
+                <Start setPlayer={setPlayer} setPtype={setPtype} setPhealth={setPhealth} setPattack={setPattack}  setPdefense={setPdefense} setPsatt={setPsatt} setPsdef={setPsdef} setPspeed={setPspeed} setPflavor={setPflavor}/>
+                {/* <Actions player={player}/> */}
             </div>
         </div>
     )
