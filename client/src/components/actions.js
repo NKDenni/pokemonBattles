@@ -42,7 +42,11 @@ const Actions = (props) => {
             } else {i = 1;}
         setPic(i);
         
+    }
 
+    const handleLearn = (e) => {
+        setBattle(false);
+        navigate("/battle")
     }
 
     return (
@@ -54,7 +58,7 @@ const Actions = (props) => {
                 <button className="action text-center" onClick={ handleBattle }>Battle</button>
             </div>
             <div className="row col my-2">
-                <button className="action text-center" onClick={ (e) => navigate("/battle")}>Learn Moves</button>
+                <button className="action text-center" onClick={ handleLearn }>Learn Moves</button>
             </div>
         </div>
     )
