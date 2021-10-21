@@ -29,7 +29,7 @@ const Battle = (props) => {
         }
     }
 
-    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor } = props;
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed  } = props;
 
     return (
         <div className="my-5 mx-3 row d-flex flex-row justify-content-evenly" >
@@ -105,23 +105,23 @@ const Battle = (props) => {
             <div className="col-sm-6">
                 <div className="row d-flex align-items-around align-content-around justify-content-center">
                     <div className="row px-5">
-                        <img className="text-center monster" src={'./img/pokemon/4-pikachu.png'} alt="Pikachu" />
+                        <img className="text-center monster" src={`./img/pokemon/${eplayer.name}/1-${eplayer.name}.png`} alt={eplayer.name} />
                         <div className="col d-flex flex-column justify-content-evenly">
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">Type: Electric{props.type}</p>
-                                <p className="col-sm-4 text-end p-0 mb-1">#: 25{props.number}</p>
+                                <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{etype}</span></p>
+                                <p className="col-sm-4 text-end p-0 mb-1">#: {eplayer.id}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">HP: 35{props.health}</p>
-                                <p className="col text-end p-0 mb-1">Speed: 50{props.speed}</p>
+                                <p className="col text-start pe-0 mb-1">HP: {ehealth}</p>
+                                <p className="col text-end p-0 mb-1">Speed: {espeed}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">Attack: 50{props.attack}</p>
-                                <p className="col text-end p-0 mb-1">Defense: 40{props.defense}</p>
+                                <p className="col text-start pe-0 mb-1">Attack: {eattack}</p>
+                                <p className="col text-end p-0 mb-1">Defense: {edefense}</p>
                             </div>
                             <div className="row">
-                                <p className="col text-start pe-0 mb-1">S-Att: 50{props.satt}</p>
-                                <p className="col text-end p-0 mb-1">S-Def: 50{props.sdef}</p>
+                                <p className="col text-start pe-0 mb-1">S-Att: {esatt}</p>
+                                <p className="col text-end p-0 mb-1">S-Def: {esdef}</p>
                             </div>
                         </div>
                     </div>
@@ -164,9 +164,9 @@ const Battle = (props) => {
                             <hr className="mt-2 mb-2" />
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row justify-content-center">
-                            <p className="col-sm-4 text-start p-0 mb-0">Height: 4{props.height}</p>
-                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
-                            <p className="col-sm-4 text-end p-0 mb-0">Weight: 50{props.weight}</p>
+                            <p className="col-sm-4 text-start p-0 mb-0">Height: {eplayer.height}</p>
+                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: {props.level}</p>
+                            <p className="col-sm-4 text-end p-0 mb-0">Weight: {eplayer.weight}</p>
                         </div>
                     </div>
                 </div>
