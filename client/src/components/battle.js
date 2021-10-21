@@ -29,7 +29,7 @@ const Battle = (props) => {
             props.handleMessageUpdate(`${winner} wins!`);
             props.handleGameOver(true);
             setPlaying(false);
-            if(winner === "player")
+            if(winner !== "enemy")
                 props.updatePlayerStats("level", playerStats.level + 1);
         }
     }
@@ -168,7 +168,7 @@ const Battle = (props) => {
                         </div>
                         <div className="row d-flex p-0 m-0 flex-row justify-content-center">
                             <p className="col-sm-4 text-start p-0 mb-0">Height: {eplayer.height}</p>
-                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{props.level}</p>
+                            <p className="col-sm-4 text-center p-0 mb-0">Lvl: 1{player.level}</p>
                             <p className="col-sm-4 text-end p-0 mb-0">Weight: {eplayer.weight}</p>
                         </div>
                     </div>
