@@ -14,7 +14,7 @@ const Monstercard = (props) => {
                 </div>
             </div>
             <div className="row px-5">
-                <img className="text-center monster" src={`./img/pokemon/4-pikachu.png`} alt="Pikachu" />
+                <img className="text-center monster" src={`./img/pokemon/${player.name}/1-${player.name}.png`} alt={player.name} />
                 <div className="col d-flex flex-column justify-content-evenly">
                     <div className="row">
                         <p className="col text-start pe-0 mb-1">Type: <span className="text-capitalize">{ptype}</span></p>
