@@ -23,6 +23,11 @@ const Actions = (props) => {
 
     const handleAppearance = (e) => {
 
+        // player.name === pikachu?
+        // Advance to next node in list
+        // List is looped so when reach end node point back to head node
+        // return current node value and set image state to current node value
+
     }
 
     return (
