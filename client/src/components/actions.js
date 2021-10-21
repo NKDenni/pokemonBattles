@@ -4,7 +4,7 @@ import { navigate } from '@reach/router';
 import axios from 'axios';
 
 const Actions = (props) => {
-    const {player, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer, pic, setPic} = props;
+    const {player, setEhealth, setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer, pic, setPic, setBattle} = props;
 
     const handleBattle = (e) => {
         const names = ['bulbasaur', 'charmander', 'squirtle', 'pikachu'];
@@ -25,6 +25,7 @@ const Actions = (props) => {
             .catch((err) => {
                 console.log(err);
             })
+            setBattle(true);
         navigate("/battle");
     }
 
@@ -53,7 +54,7 @@ const Actions = (props) => {
                 <button className="action text-center" onClick={ handleBattle }>Battle</button>
             </div>
             <div className="row col my-2">
-                <button className="action text-center" >Learn Moves</button>
+                <button className="action text-center" onClick={ (e) => navigate("/battle")}>Learn Moves</button>
             </div>
         </div>
     )

@@ -8,6 +8,8 @@ import './views.scss';
 const SideBySide = (props) => {
     const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic } = props;
 
+    const [battle, setBattle] = useState(false);
+
     const playerBaseStats = {
         ptype: "Electric",
         level: 1,
@@ -42,15 +44,16 @@ const SideBySide = (props) => {
                 <Signboard message={message} gameOver={gameOver} score={score}/>
             </div>
             <div className="stacked col mt-4" style={{ minHeight: `500px`}}>
-                <Battle 
+                {battle?
+                    <Battle 
                 handleMessageUpdate= { handleMessageUpdate }
                 handleScoreUpdate={ handleScoreUpdate }
                 handleGameOver={ handleGameOver } 
                 updatePlayerStats={ updatePlayerStats } 
                 playerStats={ playerStats }
                 {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
-                />
-                {/* <Learn message={message} setMessage={setMessage} /> */}
+                />:
+                    <Learn {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic}} />}
             </div>
         </div>
     )
