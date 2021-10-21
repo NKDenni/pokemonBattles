@@ -13,13 +13,15 @@ const Battle = (props) => {
         if(turnWinner.winner === "draw"){
             props.handleMessageUpdate(`A ${turnWinner.winner}!`);
         } else {
-            props.handleMessageUpdate(`${turnWinner.winner} wins this turn!`);
+            const winner = turnWinner.winner === "player" ? player.name : turnWinner.winner;
+            props.handleMessageUpdate(`${winner} wins this turn!`);
         }
+        props.handleScoreUpdate(turnWinner.score);
         CheckGameWinner();
     }
 
     const CheckGameWinner = () => {
-        const winner = checkWinner();
+        const winner = checkWinner() === "player" ? player.name : checkWinner();
         if(winner !== "")
         {
             props.handleMessageUpdate(`${winner} wins!`);
