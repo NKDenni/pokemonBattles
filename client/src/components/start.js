@@ -26,7 +26,6 @@ const Start= (props) => {
     }, [])
 
     const handlePokemon = (monster) => {
-        monster = "";
         console.log(monster)
         axios.get(`https://pokeapi.co/api/v2/pokemon/${monster}`)
             .then((res) => {
