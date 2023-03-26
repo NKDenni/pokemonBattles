@@ -18,6 +18,10 @@ function App() {
   const [psdef, setPsdef] = useState("");
   const [pspeed, setPspeed] = useState("");
   const [pflavor, setPflavor] = useState("");
+  const [pMoveOne, setPmoveOne] = useState("");
+  // const [pMove2, setPMove2] = useState("");
+  // const [pMove3, setPMove3] = useState("");
+  // const [pMove4, setPMove4] = useState("");
   const [selected, setSelected] = useState(false);
   const [pic, setPic] = useState(1);
 
@@ -29,6 +33,10 @@ function App() {
   const [esatt, setEsatt] = useState("");
   const [esdef, setEsdef] = useState("");
   const [espeed, setEspeed] = useState("");
+  // const [eMove1, setEMove1] = useState("");
+  // const [eMove2, setEMove2] = useState("");
+  // const [eMove3, setEMove3] = useState("");
+  // const [eMove4, setEMove4] = useState("");
   const [battle, setBattle] =useState(false);
 
   return (
@@ -42,8 +50,8 @@ function App() {
             <SideBySide 
             default path="/" 
               {...{ player, setPlayer, ptype, setPtype, phealth, setPhealth, pattack, setPattack, pdefense, setPdefense, psatt, setPsatt, 
-                psdef, setPsdef, pspeed, setPspeed, pflavor, setPflavor, pic, setPic, selected, setSelected, setEhealth, setEattack, setEdefense, 
-                setEsatt, setEsdef, setEspeed, setEtype, setEplayer, setBattle}}
+                psdef, setPsdef, pspeed, setPspeed, pMoveOne, setPmoveOne, pflavor, setPflavor, pic, setPic, selected, setSelected, setEhealth, 
+                setEattack, setEdefense, setEsatt, setEsdef, setEspeed, setEtype, setEplayer, setBattle}}
             />
             <Stacked 
             path="/battle" 

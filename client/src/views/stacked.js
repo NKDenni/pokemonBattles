@@ -6,7 +6,8 @@ import Learn from '../components/learn';
 import './views.scss';
 
 const SideBySide = (props) => {
-    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic, battle} = props;
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor,
+            ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic, battle} = props;
 
     const playerBaseStats = {
         ptype: "Electric",
@@ -49,7 +50,8 @@ const SideBySide = (props) => {
                     handleGameOver={ handleGameOver } 
                     updatePlayerStats={ updatePlayerStats } 
                     playerStats={ playerStats }
-                    {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
+                    {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic, 
+                        eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed }}
                     />:
                     <Learn 
                     {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic}} 

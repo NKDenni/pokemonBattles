@@ -4,7 +4,8 @@ import { useGame } from '../context/GameContext';
 import { navigate } from '@reach/router';
 
 const Battle = (props) => {
-    const { playerStats, player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, ehealth, eattack, edefense, esatt, esdef, espeed, pic} = props;
+    const { playerStats, player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, eplayer, etype, 
+            ehealth, eattack, edefense, esatt, esdef, espeed, pic} = props;
 
     const { playTurn, checkWinner } = useGame(); 
     const [playing, setPlaying] = useState(true);

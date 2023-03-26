@@ -4,8 +4,10 @@ import axios from 'axios';
 
 const Start= (props) => {
 
-    const { setPlayer, setPtype, setPhealth, setPattack, setPdefense, setPsatt, setPsdef, setPspeed, setPflavor, setSelected} = props;
-
+    const { setPlayer, setPtype, setPhealth, setPattack, setPdefense, setPsatt, setPsdef, setPspeed,
+            setPmoveOne, setPflavor, setSelected} = props;
+    // adding more props set
+    // setPMove2, setPMove3, setPMove4, 
     const [pokeballs, setPokeballs] = useState([]);
 
     useEffect(() => {
@@ -29,7 +31,7 @@ const Start= (props) => {
         console.log(monster)
         axios.get(`https://pokeapi.co/api/v2/pokemon/${monster}`)
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setPhealth(res.data.stats[0].base_stat);
                 setPattack(res.data.stats[1].base_stat);
                 setPdefense(res.data.stats[2].base_stat);
@@ -37,7 +39,12 @@ const Start= (props) => {
                 setPsdef(res.data.stats[4].base_stat);
                 setPspeed(res.data.stats[5].base_stat);
                 setPtype(res.data.types[0].type.name);
+                // setPMove2(res.data.moves[0].move.name);
+                // setPMove3(res.data.moves[0].move.name);
+                // setPMove4(res.data.moves[0].move.name);
                 setPlayer(res.data);
+                setPmoveOne(res.data.moves[1].move.name);
+                console.log(res.data.moves[1].move.name);
             })
             .catch((err) => {
                 console.log(err);
@@ -45,7 +52,7 @@ const Start= (props) => {
         axios.get(`https://pokeapi.co/api/v2/pokemon-species/${monster}`)
             .then((res) => {
                 let fact = res.data.flavor_text_entries[0].flavor_text;
-                console.log(fact.replace(/[\n\f]/g, ' '))
+                // console.log(fact.replace(/[\n\f]/g, ' '))
                 setPflavor(fact.replace(/[\n\f]/g, ' '))
             })
             .catch((err) => {
