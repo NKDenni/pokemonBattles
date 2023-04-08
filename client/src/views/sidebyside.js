@@ -17,7 +17,7 @@ const SideBySide = (props) => {
             <div className="sidebyside m-3 col d-flex align-items-stretch justify-content-center align-content-evenly">
                 { selected?
                     <Monstercard 
-                    {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, selected, setSelected, pic}}/>:
+                        {...{ player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pMoveOne, setPmoveOne, selected, setSelected, pic}}/>:
                     <Welcome /> 
                 }
             </div>

@@ -5,7 +5,7 @@ import Learn from '../components/learn';
 
 import './views.scss';
 
-const SideBySide = (props) => {
+const Stacked = (props) => {
     const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor,
             ehealth, eattack, edefense, esatt, esdef, espeed, etype, eplayer, pic, battle} = props;
 
@@ -61,4 +61,4 @@ const SideBySide = (props) => {
     )
 }
 
-export default SideBySide;
+export default Stacked;

@@ -3,7 +3,7 @@ import './monstercard.scss';
 
 
 const Monstercard = (props) => {
-    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pic} = props;
+    const { player, ptype, phealth, pattack, pdefense, psatt, psdef, pspeed, pflavor, pMoveOne, pic} = props;
 
     return (
         <div className="monstercard row justify-content-center align-content-sm-between">
@@ -46,7 +46,7 @@ const Monstercard = (props) => {
                     <hr className="mt-0 mb-1" />
                 </div>
                 <div className="row d-flex p-0 m-0 flex-row">
-                    <p className="col-sm-5 text-start p-0 mb-0">Growl{}</p>
+                    <p className="col-sm-5 text-start p-0 mb-0"><span className="text-capitalize">{pMoveOne}</span></p>
                     <p className="col-sm-4 text-center p-0 mb-0">Power: --{props.attack1}</p>
                     <p className="col-sm-3 text-end p-0 mb-0">Acc: 100{props.accuracy1}</p>
                 </div>
